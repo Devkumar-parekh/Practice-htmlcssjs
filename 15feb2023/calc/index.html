@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body{
+                font-size:20px;
+            }
+            table{
+                width:50%;
+                max-width: 50%;
+            }
+            button{
+                width:100px;
+                height:100px;
+            }
+            .op {
+                padding-left: 10%;
+                overflow: auto;
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan= '3'><p class="op" id="op"></p></td>
+                <td><button onclick="resetClicked(this)">C</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btnClicked(this)">1</button></td>
+                <td><button onclick="btnClicked(this)">2</button></td>
+                <td><button onclick="btnClicked(this)">3</button></td>
+                <td><button onclick="btnClicked(this)">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btnClicked(this)">4</button></td>
+                <td><button onclick="btnClicked(this)">5</button></td>
+                <td><button onclick="btnClicked(this)">6</button></td>
+                <td><button onclick="btnClicked(this)">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btnClicked(this)">7</button></td>
+                <td><button onclick="btnClicked(this)">8</button></td>
+                <td><button onclick="btnClicked(this)">9</button></td>
+                <td><button onclick="btnClicked(this)">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btnClicked(this)">.</button></td>
+                <td><button onclick="btnClicked(this)">0</button></td>
+                <td><button onclick="btnClicked(this)">-</button></td>
+                <td><button onclick="ansClicked(this)">=</button></td>
+            </tr>
+        </table>
+
+        <script>
+            function btnClicked(e){
+            document.getElementById('op').innerHTML = document.getElementById('op').innerHTML + e.textContent;
+            }
+            function ansClicked(e){
+            document.getElementById('op').innerHTML = eval(document.getElementById('op').innerHTML); 
+            }
+            function resetClicked(e){
+            document.getElementById('op').innerHTML = '';
+            }
+        </script>
+    </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

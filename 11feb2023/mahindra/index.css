@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Fauna One', serif;
+    font-variant: small-caps;
+    font-size: 18px;  
+  }
+  a{
+    cursor:pointer;
+  }
+  h1 {
+    font-family: Cinzel, serif;
+    font-size: 46px;  
+  }
+.custom-nav {
+    position: relative;
+    top: -40px;
+    right: 3%;
+    width: 145px;
+    float: right;
+}
+
+#demo .carousel-inner {
+    /* clip-path: polygon(0% 0%, 254% 75%, 12% 100%, 0% 50%); */
+    clip-path: polygon(0% 0%, 254% 92%, 6% 100%, -12% 38%);
+}
+div#demo {
+    background-color: black;
+    background-image: linear-gradient(to bottom, black,black, red);
+}
+/* .carousel-inner {
+    background-color: black;
+} */
+
+
+span.carousel-control-next-icon,span.carousel-control-prev-icon {
+    background-color: #ff000000;  
+    border: solid 2px;
+}
+
+span.carousel-control-next-icon:hover,span.carousel-control-prev-icon:hover {
+    background-color: rgb(252, 0, 0);
+    border-color: red;
+    transition: background-color 0.5s ease;
+}
+
+.sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.332);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 800ms ease-out;
+}
+
+
+
+.sweep-to-right {
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: color 1000ms;
+    transition: color 2000ms;
+}
+
+.sweep-to-right:hover:before{
+    transform: scaleX(1)
+}
+
+.custom-nav button {
+    position: absolute;
+    width: 200px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    
+}
+
+.custom-nav button {
+    width: 100px;
+}
+
+.carousel-inner {
+    max-height: 675px;
+}
+.carousel-indicators button.active {
+    background-color: red !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators button {
+    background-color: white !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50%;
+}
+.carousel-indicators {
+    position: absolute;
+    justify-content: flex-start;
+    margin-left: 6%;
+}
+.right.col.align-self-end {
+    position: relative;
+    right: 50%;
+}
+
+a.card-img-overlay.text-light {
+    top: 55%;
+    font-size: 22px;
+}
+
+img {
+    transition: 0.5s all ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.img-wrap{
+    overflow: hidden;
+}
+
+.card-body.px-0.img-wrap{
+    transition: 0.5s all ease-in-out;
+    height: 200px;
+}
+.card-body.px-0.img-wrap:hover{
+    transform: scale(1.05);
+}
+.card-body.px-0.img-wrap.img1 {
+    background: linear-gradient(to bottom,rgb(82 82 82 / 33%), rgb(0 0 0 / 80%)), url(src/automotive-420x274.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-body.px-0.img-wrap.img2 {
+    background: linear-gradient(to bottom,rgb(82 82 82 / 33%), rgb(0 0 0 / 80%)), url(src/farm-equipment-420x274.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-body.px-0.img-wrap.img3 {
+    background: linear-gradient(to bottom,rgb(82 82 82 / 33%), rgb(0 0 0 / 80%)), url(src/technology-services-420x274.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h3.what-do-ttl {
+    font-size: 22px;
+    color: #dd052b;
+}
+
+.work-wrap:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.work-wrap:hover button {
+    background-color: white;
+    color: black;
+}
+.press-section {
+    background-color: #f7f5ef;
+}
+
+
+a.link-danger.read-more {
+    text-decoration: none;
+}
+
+a.link-danger.read-more:after {
+    content: '';
+    background-color: #ffffff!important;
+    width: 45px;
+    height: 1px;
+    display: block;
+    transition: 0.5s all ease-in-out;
+}
+
+.press-block:hover .read-more:after {
+    /* transform: scaleX(1.5); */
+    width: 70px;
+}
+
+/* 
+
+.container.text-center.text-lg-start {
+    position: relative;
+    top: -315px;
+} */

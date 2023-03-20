@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Promise</h2>
+
+<p id="demo"></p>
+<script>
+
+function showResult(res){
+	document.getElementById('demo').innerHTML = res; 
+}
+
+let doPromise = new Promise(function(ifOk,ifError){
+	let age = 18;
+    
+    if(age>18){
+    	ifOk("Eligible");
+    }else{
+    	ifError("Not Eligible");
+    }
+});
+
+doPromise.then(
+function(value){
+	showResult(value);
+},
+function(value){
+	showResult(value);
+}
+);
+
+</script>
+
+</body>
+</html>
