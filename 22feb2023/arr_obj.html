@@ -1,0 +1,37 @@
+const array = [
+  {
+    name: ["apple", "banana"],
+    type: "fruti",
+  },
+  {
+    name: ["kanda", "tameta", "apple"],
+    type: "veg",
+  },
+  {
+    name: ["syaam", "ram", "apple"],
+    type: "name",
+  }
+];
+
+// output={
+//   apple: [ 'fruti', 'veg', 'name' ],
+//   banana: [ 'fruti' ],
+//   kanda: [ 'veg' ],
+//   tameta: [ 'veg' ],
+//   syaam: [ 'name' ],
+//   ram: [ 'name' ]
+// }
+
+
+let obj ={};
+array.forEach((e)=>{
+   e.name.forEach((ele)=>{
+      obj[[ele]] = [];
+   }) ;
+});
+array.forEach((e)=>{
+   e.name.forEach((ele)=>{
+    obj[[ele]].push(e.type);
+   }) ;
+});
+console.log(obj);

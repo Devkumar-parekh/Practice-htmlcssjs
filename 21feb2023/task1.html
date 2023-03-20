@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #a09f9a;
+                font-family: fantasy;
+                text-align: center;
+                font-size: larger;
+            }
+            p.common-days, #dayList {
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            p.common-days:hover {
+                background-color: rgb(175, 172, 172);
+            }
+            .selected{
+                color: white;
+                background-color: dimgrey;
+            }
+            #demo, #dayList {
+                width: max-content;
+                max-width: 100%;
+                margin: auto;
+            }
+            #dayList {
+                background-color: #afafaf;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="dayList">x</p>
+        <script>
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var total= days.reduce((t,val,i)=>{
+                if(i==1){
+                    return  `<p class='common-days' onclick='doSelect(this)' day='${t}'> ${t} </p>` + 
+                    `<p class='common-days' onclick='doSelect(this)' day='${val}'> ${val} </p>`;
+                }else{
+                    return t + `<p class='common-days' onclick='doSelect(this)' day='${val}'> ${val} </p>`;
+                }
+            });
+            document.getElementById('demo').innerHTML = total;
+
+            let d = new Date();
+            let today = days[d.getDay()];
+            document.querySelector(`[day=${today}]`).classList.toggle("selected");
+
+            function doSelect(e){
+                e.classList.toggle("selected");
+                getList();
+            }
+
+            function getList(){
+                let x = document.getElementsByClassName('selected'),result='';
+                for(var i = 0; i<x.length; i++){
+                    result +=  '|' + x[i].textContent + '|';
+                    // result +=  '|' + x[i].innerText + '|';
+
+                }
+                document.getElementById('dayList').innerHTML =result;
+            }
+        </script>
+    </body>
+</html>
