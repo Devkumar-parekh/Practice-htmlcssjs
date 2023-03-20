@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="slice">12345Developer</p>
+<p id="substring">12345Developer</p>
+<p id="substr">abcd12345Developer</p>
+<p id="split">1 2 34 5De vel op er</p>
+<p id="toUppercase">12345Developer</p>
+<p id="toLowercase">12345DEVeloper</p>
+<p id="demo"></p>
+<script>
+  setInterval(function(){
+	document.getElementById('slice').innerHTML = document.getElementById('slice').innerHTML.slice(5,7);
+	document.getElementById('substring').innerHTML = document.getElementById('substring').innerHTML.substring(5,7);
+	document.getElementById('substr').innerHTML = document.getElementById('substr').innerHTML.substr(5,7);
+	document.getElementById('split').innerHTML = document.getElementById('split').innerHTML.split(" ");
+	document.getElementById('toUppercase').innerHTML = document.getElementById('toUppercase').innerHTML.toUpperCase();
+	document.getElementById('toLowercase').innerHTML = document.getElementById('toLowercase').innerHTML.toLowerCase();
+//	document.getElementById('slice').innerHTML = document.getElementById('slice').innerHTML.slice(5,7);
+  },5000);
+    let text = "loca te wh ere PABlease 'locate' occurs!";
+    document.getElementById("demo").innerHTML = text.search(/[A-Z]*[a-z]{5}/);
+</script>
+
+</body>
+</html>
+
